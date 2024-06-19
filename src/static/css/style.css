@@ -1,0 +1,195 @@
+/* MAIN STYLING FILE: ALL STYLING FOR THE WEBSITE IS IN THIS FILE */
+
+/* ##### ROOT CSS VARIABLES ##### */
+:root {
+    /* Colors */
+    --bg-one-clr: #343336;
+    --bg-two-clr: #2c2a2e;
+    --bg-three-clr: #19191b;
+    --bg-four-clr: #0f0f11;
+    --fg-one-clr: #e2dfe7;
+    --fg-two-clr: #c9c3d2;
+    --primary-one-clr: #274cf5;
+    --primary-two-clr: #3b5df7;
+    --btn-one-bg-clr: #274cf5;
+    --btn-one-bg-hover-clr: #3b5df7;
+    --btn-one-fg-clr: #e2dfe7;
+    --btn-two-border-clr: #c9c3d2;
+    --btn-two-fg-clr: #c9c3d2;
+    --btn-two-fg-hover-clr: #19191b;
+    --btn-two-bg-clr: #c9c3d2;
+    
+    /* Global Variables */
+    --base-transition: all 0.8s ease-out 0.3s;
+    --base-radius: 5px;
+}
+
+/* ##### GLOBAL STYLING: ADD ALL GLOBAL STYLING BELOW HERE!! ##### */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 1rem;
+}
+body {
+    background: var(--bg-one-clr);
+    color: var(--fg-one-clr);
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+.cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+/* ##### HEADER STYLING: ADD ALL HEADER STYLING BELOW HERE!! ##### */
+
+/* Header Wrapper */
+.header-wrapper {
+    width: 100%;
+    height: 60px;
+    min-height: 60px;
+    position: sticky;
+    top: 0px;
+    z-index: 99999;
+    background: var(--bg-two-clr);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+/* Main Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--fg-one-clr);
+}
+.logo i {
+    color: var(--primary-one-clr);
+}
+/* Main Nav Bar */
+.main-nav {
+    display: none;
+}
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+.main-nav ul li a {
+    color: var(--fg-two-clr);
+    position: relative;
+}
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary-one-clr);
+    transition: var(--base-transition);
+}
+.main-nav ul li a:hover::after {
+    width: 100%;
+}
+/* Nav buttons wrapper */
+.nav-btns-wrapper {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+}
+/* Icon nav wrapper */
+#icon-nav-wrapper {
+    display: flex;
+}
+/* Nav Button */
+.nav-btn {
+    height: 35px;
+    border: 2px solid var(--btn-two-border-clr);
+    color: var(--btn-two-fg-clr);
+    border-radius: var(--base-radius);
+    font-size: 0.9rem;
+}
+.nav-btn:hover {
+    background: var(--btn-two-bg-clr);
+    color: var(--btn-two-fg-hover-clr);
+}
+
+
+
+
+
+/* ##### UI COMPONENTS STYLING: ADD ALL UI COMPONENT STYLING BELOW HERE!! ##### */
+
+/* Std Button */
+.std-btn {
+    cursor: pointer;
+    outline: none;
+    padding: 0 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--base-transition);
+}
+/* Std Icon Button */
+.std-icon-btn {
+    height: 30px;
+    width: 30px;
+    border-radius: var(--base-radius);
+    color: var(--btn-two-fg-clr);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    transition: var(--base-transition);
+}
+.std-icon-btn:hover {
+    background-color: var(--btn-two-bg-clr);
+    color: var(--btn-two-fg-hover-clr);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ##### MEDIA QUERIES: ADD ALL MEDIA QUERIES BELOW HERE!! ##### */
+
+/* Media queries with a min width greater than 860px */
+@media all and (min-width: 860px) {
+    /* Icon nav wrapper */
+    #icon-nav-wrapper {
+        display: none;
+    }
+    /* Main Nav Bar */
+    .main-nav {
+        display: block;
+    }
+}
+
+/* Media queries with a min width greater than 1260px */
+@media all and (min-width: 1260px) {
+    /* Nav buttons wrapper */
+    .nav-btns-wrapper {
+        display: flex;
+    }
+}
