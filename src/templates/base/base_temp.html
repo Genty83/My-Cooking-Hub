@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My cooking Hub is an online cookbook website where the users can create and view recipes">
+    <!-- TITLE TAG -->
+    <title>My Cooking Hub</title>
+    <!-- LINK TAGS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <!-- SCRIPT TAGS -->
+     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+    
+    <!-- HEADER SECTION START -->
+    <header class="header-wrapper">
+        <!-- Logo -->
+         <a href="{{ url_for('home') }}" class="logo"><i class="fa-solid fa-utensils"></i> My Cooking Hub</a>
+         <!-- Navbar start  -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('home') }}">View My Recipes</a></li>
+                <li><a href="{{ url_for('home') }}">Create New Recipe</a></li>
+                <li><a href="{{ url_for('home') }}">About Us</a></li>
+                <li><a href="{{ url_for('home') }}">My Account</a></li>
+            </ul>
+        </nav>
+         <!-- Navbar end -->
+
+         <!-- Nav Buttons Wrapper Start -->
+        <div class="nav-btns-wrapper">
+            <a class="std-btn nav-btn" href="#"><i class="fa-solid fa-user"></i>Sign In</a>
+            <a class="std-btn nav-btn" href="#"><i class="fa-solid fa-user-plus"></i>Sign Up</a>
+        </div>
+         <!-- Nav Buttons Wrapper End -->
+
+         <!-- Nav Icon Buttons Wrapper Start -->
+        <div id="icon-nav-wrapper" class="nav-btns-wrapper">
+            <a class="std-icon-btn" href="#"><i class="fa-solid fa-user"></i></a>
+            <a class="std-icon-btn" href="#"><i class="fa-solid fa-user-plus"></i></a>
+            <a class="std-icon-btn" href="#"><i class="fa-solid fa-bars"></i></a>
+        </div>
+         <!-- Nav Icon Buttons Wrapper End -->
+    </header>
+    <!-- HEADER SECTION END -->
+
+    <!-- MAIN SECTION START -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <!-- MAIN SECTION END -->
+
+    <!-- FOOTER SECTION START -->
+    <footer class="footer-wrapper">
+
+    </footer>
+    <!-- FOOTER SECTION END -->
+
+</body>
+</html>
