@@ -15,7 +15,7 @@
     --primary-two-clr: #5574fc;
     --btn-one-bg-clr: #274cf5;
     --btn-one-bg-hover-clr: #5574fc;
-    --btn-one-fg-clr: #19191b;
+    --btn-one-fg-clr: #e2dfe7;
     --btn-two-border-clr: #c9c3d2;
     --btn-two-fg-clr: #c9c3d2;
     --btn-two-fg-hover-clr: #19191b;
@@ -148,7 +148,7 @@ li {
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(to bottom, #19191b99 40%, #ffffff10);
+    background: linear-gradient(to bottom, #19191b, #19191b90);
     display: block;
 }
 /* Hero content wrapper */
@@ -192,18 +192,16 @@ li {
 /* Footer wrapper */
 .footer-wrapper {
     width: 100%;
-    height: max-content;
+    height: 100%;
     background: linear-gradient(to right, var(--bg-three-clr) 55%, var(--bg-two-clr));
     display: flex;
     flex-direction: column;
 }
-
 /* Footer top wrapper */
 .footer-top-wrapper {
     width: 100%;
     padding: 0 1%;
 }
-
 /* Footer top inner wrapper */
 .footer-top-inner-wrapper {
     width: 100%;
@@ -218,17 +216,16 @@ li {
     display: flex;
     gap: 0.5rem;
 }
-
 /* Footer middle wrapper */
 .footer-middle-wrapper {
     width: 100%;
     height: 100%;
     display: grid;
     place-items: center;
-    gap: 1%;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
     padding: 1%;
 }
-
 /* Footer bottom wrapper */
 .footer-bottom-wrapper {
     width: 100%;
@@ -240,7 +237,6 @@ li {
 .footer-bottom-wrapper p {
     font-size: 0.8rem;
 }
-
 /* Footer card */
 .footer-card {
     width: 290px;
@@ -255,7 +251,6 @@ li {
 .footer-card p {
     font-size: 0.9rem;
 }
-
 /* Subscribe wrapper */
 .subscribe-wrapper {
     width: 100%;
@@ -273,6 +268,7 @@ li {
     color: var(--fg-three-clr);
     font-size: 0.9rem;
     width: 100%;
+    padding-left: 0.4rem;
 }
 .subscribe-wrapper button {
     cursor: pointer;
@@ -290,7 +286,6 @@ li {
 .subscribe-wrapper button:hover {
     background-color: var(--btn-one-bg-hover-clr);
 }
-
 
 
 /* ##### UI COMPONENTS STYLING: ADD ALL UI COMPONENT STYLING BELOW HERE!! ##### */
@@ -369,8 +364,34 @@ li {
     color: var(--primary-one-clr);
 }
 
-
-
+/* Tooltip */
+.tooltip {
+    position: relative;
+}
+.tooltip::before {
+    content: attr(data-title);
+    height: 30px;
+    width: auto;
+    padding: 0 0.6rem;
+    font-size: 0.8rem;
+    background-color: var(--bg-four-clr);
+    border-radius: var(--base-radius);
+    border: 1px solid var(--bg-one-clr);
+    box-shadow: 2px 2px 6px var(--bg-three-clr);
+    color: var(--fg-one-clr);
+    text-wrap: nowrap;
+    display: grid;
+    place-items: center;
+    transition: opacity 1s;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-100%, 110%);
+}
+.tooltip:hover::before {
+    opacity: 1;
+}
 
 
 
