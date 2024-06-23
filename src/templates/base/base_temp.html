@@ -24,7 +24,7 @@
             <ul>
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="{{ url_for('view_my_recipes') }}">View My Recipes</a></li>
-                <li><a href="{{ url_for('home') }}">Create New Recipe</a></li>
+                <li><a href="{{ url_for('create_new_recipe') }}">Create New Recipe</a></li>
                 <li><a href="{{ url_for('home') }}">View All Recipes</a></li>
                 <li><a href="{{ url_for('home') }}">My Account</a></li>
             </ul>
@@ -109,7 +109,7 @@
                 <div class="footer-seperator"></div>
                 <a class="footer-link" href="{{ url_for('home') }}"><i class="fa-solid fa-home"></i>Home</a>
                 <a class="footer-link" href="{{ url_for('view_my_recipes') }}"><i class="fa-solid fa-table-columns"></i>View My Recipes</a>
-                <a class="footer-link" href="#"><i class="fa-solid fa-table-columns"></i>Create New Recipe</a>
+                <a class="footer-link" href="{{ url_for('create_new_recipe') }}"><i class="fa-solid fa-table-columns"></i>Create New Recipe</a>
                 <a class="footer-link" href="#"><i class="fa-solid fa-table-columns"></i>View All Recipes</a>
                 <a class="footer-link" href="#"><i class="fa-solid fa-file-invoice"></i>My Account</a>
             </div>
