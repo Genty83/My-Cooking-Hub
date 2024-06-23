@@ -21,6 +21,12 @@ def view_my_recipes():
     return render_template("view_my_recipes.html")
 
 
+# Create New Recipes page
+@app.route("/create_new_recipe")
+def create_new_recipe():
+    return render_template("create_new_recipe.html")
+
+
 
 if __name__ == "__main__":
     app.run(
