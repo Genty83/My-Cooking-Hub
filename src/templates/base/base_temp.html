@@ -14,13 +14,19 @@
      <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </head>
 <body>
+
+    <!-- BANNER START -->
+    <div class="banner">
+
+    </div>
+    <!-- BANNER END -->
     
     <!-- HEADER SECTION START -->
     <header class="header-wrapper">
         <!-- Logo -->
         <a href="{{ url_for('home') }}" class="logo"><i class="fa-solid fa-utensils"></i> My Cooking Hub</a>
         <!-- Navbar start  -->
-        <nav class="main-nav">
+        <nav class="navbar">
             <ul>
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="{{ url_for('view_my_recipes') }}">View My Recipes</a></li>
@@ -31,14 +37,12 @@
 
             <!-- Nav Buttons Wrapper Start -->
             <div class="nav-btns-wrapper">
-                <a class="std-btn nav-btn" href="#"><i class="fa-solid fa-user"></i>Sign In</a>
-                <a class="std-btn nav-btn" href="#"><i class="fa-solid fa-user-plus"></i>Sign Up</a>
+                <a class="btn btn-med" href="#"><i class="fa-solid fa-user"></i>Create Account</a>
+                <a class="btn btn-med" href="#"><i class="fa-solid fa-user-plus"></i>Sign Up</a>
             </div>
             <!-- Nav Buttons Wrapper End -->
         </nav>
          <!-- Navbar end -->
-
-         
 
          <!-- Nav Icon Buttons Wrapper Start -->
         <div id="icon-nav-wrapper" class="nav-btns-wrapper">
@@ -59,11 +63,18 @@
 
     <!-- FOOTER SECTION START -->
     <footer class="footer-wrapper">
+        <!-- Shape divider -->
+        <div class="custom-shape-divider-top-footer">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+
         <!-- Footer Top Wrapper -->
         <div class="footer-top-wrapper">
             <div class="footer-top-inner-wrapper">
                 <!-- Logo -->
-                <a href="{{ url_for('home') }}" class="logo"><i class="fa-solid fa-utensils"></i> My Cooking Hub</a>
+                <a href="{{ url_for('home') }}" class="logo footer-logo"><i class="fa-solid fa-utensils"></i> My Cooking Hub</a>
                 <!-- Social buttons layout -->
                 <div class="social-btns-layout">
                     <a href="#" class="social-media-btn tooltip" data-title="Facebook" aria-label="Link to facebook">
